@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>采购管理</title>
+    <link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+    <nav id="index_header" class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <h2>欢迎进入</h2>
+    </nav>
+    <div id="index_content" class="clearfix">
+        <nav id="index_nav" class="pull-left">
+            <ul class="nav nav-pills nav-stacked" role="tablist">
+                <li role="presentation" class="active1">
+                    <a href="#">
+                        <i class="glyphicon glyphicon-shopping-cart index_icon"></i>
+                        <span>采购管理</span>
+                    </a>
+                </li>
+                <li role="presentation">
+                    <a href="chart.html">
+                        <i class="glyphicon glyphicon-signal index_icon"></i>
+                        <span>图表展示</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <section id="right_content" class="pull-left">
+            <div class="container wz-header">
+                <ul class="nav nav-tabs nav-justified" role="tablist">
+                    <li role="presentation" class="active"><a href="#">采购管理</a></li>
+                    <li role="presentation"><a href="chart.html">图表展示</a></li>
+                </ul>
+                <div class="tool_nav">
+                    <button class="pur_add">
+                        <i class="glyphicon glyphicon-plus"></i>
+                        增加
+                    </button>
+                    <button class="pur_revamp">
+                        <i class="glyphicon glyphicon-pencil"></i>
+                        修改
+                    </button>
+                    <button class="pur_remove">
+                        <i class="glyphicon glyphicon-remove"></i>
+                        删除
+                    </button>
+                    <button class="pur_search">
+                        <i class="glyphicon glyphicon-search"></i>
+                        查询
+                    </button>
+                    <button class="pur_save">
+                        <i class="glyphicon glyphicon-saved"></i>
+                        保存
+                    </button>
+                    <button class="pur_switchover">
+                        <i class="glyphicon glyphicon-resize-horizontal"></i>
+                        切换
+                    </button>
+                </div>
+            </div>
+            <div id="pur_menu" class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="pur_num">单据号</label>
+                        <input type="text" id="pur_num" value="自动编码">
+                    </div>
+                    <div class="col-md-4" id="purtime">
+                        <label for="pur_time">单据日期</label>
+                        <input type="text" id="pur_time">
+                        <i class="glyphicon glyphicon-calendar choiceDate"></i>
+                        <div id="timeBox" style="display: none">
+                            <div id="box">
+                                <a href="javascript:;" id="link1"></a>
+                                <span>
+                                    <span></span>年
+                                    <span></span>月
+                                </span>
+                                <a href="javascript:;" id="link2"></a>
+                            </div>
+                            <div id="list" class="clearFix">
+                                <div>日</div>
+                                <div>一</div>
+                                <div>二</div>
+                                <div>三</div>
+                                <div>四</div>
+                                <div>五</div>
+                                <div>六</div>
+                            </div>
+                            <div id="content" class="clearfix"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="pur_store">默认仓库</label>
+                        <select id="pur_store">
+                            <option value="0">一号仓库</option>
+                            <option value="1">二号仓库</option>
+                            <option value="2">三号仓库</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="pur_mold">采购类型</label>
+                        <select id="pur_mold">
+                            <option value="0">设备采购</option>
+                            <option value="1">原材料采购</option>
+                            <option value="2">零部件采购</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="supplier">供应商</label>
+                        <input type="text" id="supplier">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="pur_people">经办人</label>
+                        <input type="text" id="pur_people">
+                    </div>
+                </div>
+                <!--点击增加按钮会出现的页面-->
+                <div id="pur_table2">
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th width="60"></th>
+                            <th width="60">添加</th>
+                            <th width="60">删除</th>
+                            <th>存货名称</th>
+                            <th>存货编码</th>
+                            <th>单位</th>
+                            <th>数量</th>
+                            <th>单价(元)</th>
+                            <th>采购金额</th>
+                        </tr>
+                        </thead>
+                        <tbody class="addtbody">
+                        <!--<tr height="30">-->
+                            <!--<td></td>-->
+                            <!--<td>-->
+                                <!--<i class="glyphicon glyphicon-plus"></i>-->
+                                <!--<b class="glyphicon glyphicon-remove"></b>-->
+                            <!--</td>-->
+                            <!--<td><input type="text"></td>-->
+                            <!--<td><input type="text"></td>-->
+                            <!--<td><input type="text"></td>-->
+                            <!--<td><input type="text" value="0"></td>-->
+                            <!--<td><input type="text" value="0"></td>-->
+                            <!--<td><input type="text"></td>-->
+                        <!--</tr>-->
+                        </tbody>
+                        <tbody class="totalTbody">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>合计</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td id="total_number">0</td>
+                            <td></td>
+                            <td id="total_amount">0</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!--根据数据页面一加载上来就呈现的数据-->
+            <div id="pur_table">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th width="80"></th>
+                        <th>单据号</th>
+                        <th>单据日期</th>
+                        <th>供应商</th>
+                        <th>经办人</th>
+                        <th>采购金额</th>
+                    </tr>
+                    </thead>
+                    <tbody class="intbody">
+                    <!--<tr>-->
+                        <!--<td></td>-->
+                        <!--<td></td>-->
+                        <!--<td></td>-->
+                        <!--<td></td>-->
+                        <!--<td></td>-->
+                        <!--<td></td>-->
+                    <!--</tr>-->
+                    </tbody>
+                </table>
+            </div>
+            <div id="removeMask">
+                <div id="removeInner">
+                    <p>您确认删除单据[ <span>jh00025</span>]吗？</p>
+                    <p>
+                        <button class="make_sure">确定</button>
+                        <button class="cancel">取消</button>
+                    </p>
+                </div>
+            </div>
+            <div id="searchMask">
+                <div id="searchInner">
+                    <p>
+                        <button class="glyphicon glyphicon-search btn_search"></button>
+                        <span>查询条件</span>
+                        <button class="glyphicon glyphicon-remove btn_close"></button>
+                    </p>
+                    <div id="search_table">
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>条件名称</th>
+                                    <th>关系符</th>
+                                    <th>起始值</th>
+                                    <th>结束值</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>单据编码</td>
+                                    <td>等于</td>
+                                    <td>
+                                        <div class="coding">
+                                            <input type="text">
+                                        </div>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>供应商</td>
+                                    <td>等于</td>
+                                    <td>
+                                        <div class="search_supplier">
+                                            <input type="text">
+                                        </div>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>经办人</td>
+                                    <td>等于</td>
+                                    <td>
+                                        <div class="search_agent">
+                                            <input type="text">
+                                        </div>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>采购金额</td>
+                                    <td>介于</td>
+                                    <td>
+                                        <div class="search_money1">
+                                            <input type="text">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="search_money2">
+                                            <input type="text">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="sure_search">
+                        <button>
+                            <i class="glyphicon glyphicon-search btn_sea"></i>
+                            <span>确定</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="../js/data.js"></script>
+    <script src="../jquery/dist/jquery.min.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,359 @@
+/*登录页面开始*/
+#register li{
+    list-style: none;
+}
+#register .title{
+    height: 50px;
+    margin-bottom: 30px;
+    font:30px/50px "宋体";
+    text-shadow: 2px 0 1px green,0px 0 10px #00ffe7,0 0 30px orange;
+}
+#register #prompt{
+    border-radius:3px;
+    width: 230px;
+    height: 32px;
+    border:1px solid red;
+    position: absolute;
+    left: 50px;
+    top: 72px;
+    font: 14px "宋体";
+    color: red;
+    display: none;
+}
+#register {
+    position: relative;
+    background-color: #f0f0f0;
+    width: 260px;
+    margin:100px auto;
+    padding:30px 50px;
+    border-radius: 5px;
+}
+#register li{
+    margin: 10px 0px;
+    height: 60px;
+    color: #7f5821;
+}
+#register label{
+    width:250px;
+    height: 20px;
+    font: 16px/26px "宋体";
+}
+#register input{
+    border:1px solid #cecccd;
+    border-radius:3px;
+    width: 250px;
+    height: 30px;
+    background-color: #ffda81;
+}
+#register #login,#register #registered {
+    cursor: pointer;
+    margin:20px 10px;
+    width: 100px;
+    background-color: #fee28f;
+    height:30px;
+    border-radius: 10px;
+    border: 1px solid #e1cc9d;
+    font:20px/30px "宋体";
+}
+#register #login:hover,#register #registered:hover{
+    background-color: orange;
+    color: #fff;
+}
+/*登录页面结束*/
+/*index主页*/
+button{
+    border: none;
+    background-color: transparent;
+}
+body{
+    padding-top: 70px;
+}
+input:disabled{
+    background-color:#fff;
+}
+
+#index_header {
+    text-indent: 20px;
+    min-height: 45px;
+    background: #438eb9;
+}
+.index_icon{
+    margin-right:4px;
+}
+#index_nav{
+    margin:2px 15px 10px 15px;
+    border:1px solid grey;
+}
+#index_nav .active1{
+    background-color: #92fffa;
+}
+#index_nav .active1 a{
+    color: #000;
+}
+#index_nav li{
+    text-align: center;
+    width: 140px;
+}
+/*采购上面增删改查导航开始*/
+#right_content{
+    width: 1000px;
+}
+.tool_nav{
+    padding:10px 0 10px 50px;
+    border-bottom: 1px solid #E0E2E5;
+    background-color: #f8fafc;
+}
+.tool_nav button{
+    width: 100px;
+    margin: 0 30px;
+}
+.tool_nav button:nth-of-type(1){
+    color: #6d5b9c;
+}
+.tool_nav button:nth-of-type(2){
+    color: #ff892a;
+}
+.tool_nav button:nth-of-type(3){
+    color: #dd5a43;
+}
+.tool_nav button:nth-of-type(4){
+    color: #ac5978;
+}
+.tool_nav button:nth-of-type(5){
+    color: #69aa46;
+}
+.tool_nav button:nth-of-type(6){
+    color: #8fbcd9;
+}
+.tool_nav button.static{
+    color:#d2d3d4
+}
+/*采购上面增删改查导航结束*/
+/*采购内容开始*/
+#pur_menu{
+    display: none;
+    padding-top: 20px;
+    font:14px/30px "微软雅黑";
+}
+#pur_menu>div{
+    height:40px;
+}
+#pur_menu label{
+    width: 70px;
+    text-align: left;
+}
+#pur_time,#pur_num,#supplier,#pur_people,#pur_store,#pur_mold{
+    width: 140px;
+    height: 100%;
+    border: 1px solid #d5d5d5;
+    padding: 4px 6px;
+    font-size: 14px;
+}
+.tool_nav button:hover{
+    background-color: #d2d2d2;
+    color: #fff;
+}
+#pur_table,#pur_table2{
+    margin-top: 20px;
+    font:14px/30px "微软雅黑";
+    text-align: center;
+}
+th,input{
+    text-align: center;
+}
+input{
+    outline: none;
+}
+.pur_active{
+    background-color: #ffe48d;
+}
+#pur_menu .addtbody input,#pur_menu .totalTbody input{
+    border: none;
+    width:100%;
+    height:100%;
+}
+.addtbody i:hover{
+    color: green;
+}
+.addtbody b:hover{
+    color: red;
+}
+.choiceDate{
+    position: relative;
+    left: -25px;
+}
+.cheactive{
+    background-color:#ffe48d;
+}
+/*采购内容结束*/
+/*时间日期样式开始*/
+#purtime{
+    position: relative;
+}
+#timeBox{
+    position: absolute;
+    background-color:white;
+    z-index: 99;
+    left: 90px;
+    top: 35px;
+    width: 280px;
+    height:200px;
+    border:1px solid rgba(0, 0, 0, 0.15);
+}
+#list,#content {
+    width:280px;
+}
+#list div,#content p,#content div{
+    float:left;
+    width:40px;
+    height: 20px;
+    text-align: center;
+    font:12px/20px "微软雅黑";
+}
+#content .active2 {
+    background-color: red;
+    color: #fff;
+}
+#box {
+    width: 280px;
+    height: 20px;
+    margin-bottom:10px;
+}
+#box>span{
+    float: left;
+    width: 100px;
+    text-align: center;
+    font: 12px/20px "微软雅黑";
+}
+#box a{
+    margin:10px 40px;
+    float: left;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+}
+#box #link1{
+    border-right:5px solid #000;
+}
+#box #link2 {
+    border-left:5px solid #000;
+}
+/*时间日期样式结束*/
+/*删除按钮点击后出现的弹出层开始*/
+#removeMask{
+    opacity: 0;
+    z-index: -99;
+    position: fixed;
+    top:64px;
+    left:157px;
+    width: 100%;
+    height:100%;
+    background-color:rgba(128,128,128,0.4);
+    transition: 0.5s;
+}
+#removeInner{
+    margin:200px 0px;
+    padding:30px 35% 0px;
+    width: 100%;
+    height:145px;
+    background-color: #000;
+    color: #d2d2d2;
+    font:16px/44px "微软雅黑";
+}
+#removeInner p{
+    width: 260px;
+    text-align: center;
+}
+#removeInner button{
+    text-align: center;
+    width: 70px;
+    height: 40px;
+    font:18px/40px "微软雅黑";
+}
+#removeInner .make_sure{
+    background-color: #d15b47;
+}
+#removeInner .cancel{
+    background-color: #87b87f;
+}
+/*删除按钮点击后出现的弹出层结束*/
+/*查询按钮点击后出现的弹出层开始*/
+#searchMask{
+    opacity: 0;
+    z-index: -99;
+    position: fixed;
+    top:64px;
+    left:157px;
+    width: 100%;
+    height:100%;
+    background-color:rgba(125,126,103,0.3);
+    transition: 0.7s;
+}
+#searchInner{
+    width: 500px;
+    height:320px;
+    border:1px solid #000;
+    background-color: #fff;
+    margin: 50px auto;
+}
+#searchInner p{
+    border-bottom: 1px solid #e5e5e5;
+}
+#searchInner .btn_search{
+    color: #69aa46;
+    font-size: 24px;
+    line-height: 46px;
+    margin-left: 15px;
+}
+#searchInner .btn_close{
+    color: #ccc;
+    font-size: 16px;
+    line-height: 46px;
+    margin-left: 340px;
+}
+#searchInner .btn_close:hover{
+    color: #808080;
+}
+#searchInner p span{
+    color: #393939;
+    font:14px/46px "微软雅黑";
+}
+#search_table{
+    margin: 14px 20px;
+    font: 12px/2 "微软雅黑";
+}
+#search_table td{
+    text-align: center;
+}
+.sure_search{
+    border-top: 1px solid #e4e9ee;
+    height: 52px;
+    background-color: #eff3f8;
+    text-align: center;
+}
+.sure_search button{
+    width: 68PX;
+    height: 34px;
+    background-color: #428bca;
+    margin-top: 10px;
+    color: #fffff2;
+    font: 12px/34px "微软雅黑";
+}
+.sure_search button:hover{
+    color: #c1c1c1;
+}
+#search_table input{
+    border: none;
+    background-color: transparent;
+    margin-left: -84px;
+    margin-right: -84px;
+    width: 96px;
+    height: 100%;
+    text-align: left;
+}
+.coding input{
+    /*width: 50px;*/
+    /*height: 100%;*/
+    /*text-align: left;*/
+}
+/*查询按钮点击后出现的弹出层结束*/

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图表展示</title>
+    <link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+<nav id="index_header" class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <h2>欢迎进入</h2>
+</nav>
+<div id="index_content" class="clearfix">
+    <nav id="index_nav" class="pull-left">
+        <ul class="nav nav-pills nav-stacked" role="tablist">
+            <li role="presentation">
+                <a href="index.html">
+                    <i class="glyphicon glyphicon-shopping-cart index_icon"></i>
+                    <span>采购管理</span>
+                </a>
+            </li>
+            <li role="presentation" class="active1">
+                <a href="#">
+                    <i class="glyphicon glyphicon-signal index_icon"></i>
+                    <span>图表展示</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <section id="right_content" class="pull-left">
+        <div class="container wz-header">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+                <li role="presentation"><a href="index.html">采购管理</a></li>
+                <li role="presentation" class="active"><a href="#">图表展示</a></li>
+            </ul>
+        </div>
+        <div class="tubiao">
+            <canvas id="canvas" style="display: block;"></canvas>
+            <div id="my_chart" style="width: 600px;height: 400px"></div>
+        </div>
+    </section>
+</div>
+<script src="../js/data.js"></script>
+<script src="../jquery/dist/jquery.min.js"></script>
+<script src="../echarts.min.js"></script>
+<script src="../js/chart.js"></script>
+</body>
+</html>
